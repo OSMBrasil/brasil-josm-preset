@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<annotations author="Aun 'Skippern' Johnsen" version="0.1" descroption="Brazilian Tagging Preset" shortdescription="Brazil">
+<chunk id="rodovia">
+			<combo key="network" text="Network" use_last_as_default="true" required="true" >
+				<list_entry value="BR" short_description="Federal Highway"/>
+				<list_entry value="BR:AC" short_description="Acre State Highway"/>
+				<list_entry value="BR:AL" short_description="Alagoas State Highway"/>
+				<list_entry value="BR:AP" short_description="Amapá State Highway"/>
+				<list_entry value="BR:AM" short_description="Amazonas State Highway"/>
+				<list_entry value="BR:BA" short_description="Bahia State Highway"/>
+				<list_entry value="BR:CE" short_description="Ceará State Highway"/>
+				<list_entry value="BR:DF" short_description="Destrito Federal Highway"/>
+				<list_entry value="BR:ES" short_description="Espírito Santo State Highway"/>
+				<list_entry value="BR:GO" short_description="Goiás State Highway"/>
+				<list_entry value="BR:MA" short_description="Maranhão State Highway"/>
+				<list_entry value="BR:MT" short_description="Mato Grosso State Highway"/>
+				<list_entry value="BR:MS" short_description="Mato Grosso do Sul State Highway"/>
+				<list_entry value="BR:MG" short_description="Minas Gerais State Highway"/>
+				<list_entry value="BR:PA" short_description="Pará State Highway"/>
+				<list_entry value="BR:PB" short_description="Paraiba State Highway"/>
+				<list_entry value="BR:PR" short_description="Paraná State Highway"/>
+				<list_entry value="BR:PE" short_description="Pernambuco State Highway"/>
+				<list_entry value="BR:PI" short_description="Piaui State Highway"/>
+				<list_entry value="BR:RJ" short_description="Rio de Janeiro State Highway"/>
+				<list_entry value="BR:RN" short_description="Rio Grande do Norte State Highway"/>
+				<list_entry value="BR:RS" short_description="Rio Grande do Sul State Highway"/>
+				<list_entry value="BR:RO" short_description="Rondônia State Highway"/>
+				<list_entry value="BR:RR" short_description="Roraima State Highway"/>
+				<list_entry value="BR:SC" short_description="Santa Catarina State Highway"/>
+				<list_entry value="BR:SP" short_description="São Paulo State Highway"/>
+				<list_entry value="BR:SE" short_description="Sergipe State Highway"/>
+				<list_entry value="BR:TO" short_description="Tocatins State Highway"/>
+			</combo>
+</chunk>
+<chunk id="surface">
+			<combo key="surface" text="Surface" use_last_as_default="true">
+				<list_entry value="paved"/>
+				<list_entry value="unpaved"/>
+				<list_entry value="asfalt"/>
+				<list_entry value="cobblestone"/>
+				<list_entry value="concrete"/>
+				<list_entry vlaue="earth"/>
+				<list_entry value="sand"/>
+			</combo>
+</chunk>
+	<group name="Brazil" icon="http://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/22px-Flag_of_Brazil.svg.png">
+		<item name="Highway Network" icon="presets/trunk.png" type="way,relation">
+			<label text="Edit Highway Network" />
+			<space />
+			<combo key="highway" text="Highway" use_last_as_default="true" required="true">
+                <list_entry value="motorway"/>
+                <list_entry value="motorway_link"/>
+                <list_entry value="trunk"/>
+                <list_entry value="trunk_link"/>
+                <list_entry value="primary"/>
+                <list_entry value="primary_link"/>
+                <list_entry value="secundary"/>
+                <list_entry value="secundary_link"/>
+                <list_entry value="tertiary"/>
+                <list_entry value="tertiary_link"/>
+                <list_entry value="unclassified"/>
+            </combo>
+			<text key="name" text="Name" default="" delete_if_empty="true" />
+			<text key="ref" text="Reference" default="" delete_if_empty="true" />
+			<reference ref="rodovia"/>
+			<text key="maxspeed" text="Maxspeed" default="" delete_if_empty="true" />
+		</item>
+		<item name="Duplicada" icon="presets/empty.png" type="way">
+			<label text="DNIT class duplicated highway" />
+			<label pt.text="DNIT classe rodovia duplicada" />
+			<key key="highway" value="trunk"/>
+			<text key="name" text="Name"/>
+			<text key="ref"	text="Reference"/>
+			<reference ref="rodovia"/>
+			<text key="maxspeed" text="Maxspeed"/>
+		</item>
+		<item name="Em Duplicação" icon="presets/empty.png" type="way">
+			<label text="DNIT class highway in duplication" />
+			<label pt.text="DNIT classe rodovia em duplicação" />
+			<key key="highway" value="trunk"/>
+			<text key="name" text="Name"/>
+			<text key="ref"	text="Reference"/>
+			<reference ref="rodovia"/>
+			<text key="maxspeed" text="Maxspeed"/>
+		</item>
+		<item name="Pivementada" icon="presets/empty.png" type="way">
+			<label text="DNIT class paved highway" />
+			<label pt.text="DNIT classe rodovia pivementada" />
+			<key key="highway" value="primary"/>
+			<text key="name" text="Name"/>
+			<text key="ref"	text="Reference"/>
+			<reference ref="rodovia"/>
+			<text key="maxspeed" text="Maxspeed"/>
+		</item>
+		<item name="Em Pivementação" icon="presets/empty.png" type="way">
+			<label text="DNIT class highway in paving" />
+			<label pt.text="DNIT classe rodovia em pivementação" />
+			<key key="highway" value="secundary"/>
+			<text key="name" text="Name"/>
+			<text key="ref"	text="Reference"/>
+			<reference ref="rodovia"/>
+			<text key="maxspeed" text="Maxspeed"/>
+		</item>
+		<item name="Implantada" icon="presets/empty.png" type="way">
+			<label text="DNIT class implemented highway" />
+			<label pt.text="DNIT classe rodovia implantada" />
+			<key key="highway" value="tertiary"/>
+			<text key="name" text="Name"/>
+			<text key="ref"	text="Reference"/>
+			<reference ref="rodovia"/>
+			<text key="maxspeed" text="Maxspeed"/>
+		</item>
+		<item name="Em Implantação" icon="presets/empty.png" type="way">
+			<label text="DNIT class highway under implementation" />
+			<label pt.text="DNIT classe rodovia em implantação" />
+			<key key="highway" value="tertiary"/>
+			<text key="name" text="Name"/>
+			<text key="ref"	text="Reference"/>
+			<reference ref="rodovia"/>
+			<text key="maxspeed" text="Maxspeed"/>
+		</item>
+		<item name="Leitao Natural" icon="presets/empty.png" type="way">
+			<label text="DNIT class highway of natural track" />
+			<label pt.text="DNIT classe rodovia leitao natural" />
+			<key key="highway" value="unclassified"/>
+			<text key="name" text="Name"/>
+			<text key="ref"	text="Reference"/>
+			<reference ref="rodovia"/>
+			<text key="maxspeed" text="Maxspeed"/>
+		</item>
+		<item name="Planejada" icon="presets/empty.png" type="way">
+		</item>
+		<item name="Fuel" icon="presets/fuel.png" type="node,closedway">
+			<link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=fuel"
+			  pt_BR.href="http://wiki.openstreetmap.org/wiki/Pt-br:Tag:amenity=fuel" />
+			<label text="Edit Fuel" />
+			<key key="amenity" value="fuel" />
+			<combo key="brand" text="Brand">
+				<list_entry value="Petrobras"/>
+				<list_entry value="Ale"/>
+				<list_entry value="Ipiranga"/>
+				<list_entry value="Esso"/>
+				<list_entry value="Shell"/>
+				<list_entry value="Independent"/>
+			</combo>
+			<text key="name" text="Name" />
+			<text key="operator" text="Operator" />
+			<combo key="opening_hours" text="Opening Hours" values="24/7,Mo-Fr 08:30-20:00,Tu-Su 08:00-15:00;Sa 08:00-12:00" />
+			<combo key="shop" text="With shop">
+				<list_entry value="yes"/>
+				<list_entry value="convenience"/>
+				<list_entry value="kiosk"/>
+				<list_entry value="no"/>
+			</combo>
+			<label text="Fuel types:" />
+			<check key="fuel:diesel" text="Diesel" default="off" />
+			<check key="fuel:biodiesel" text="Bio Diesel" default="off" />
+			<check key="fuel:octane_87" text="Octane 87 (Comum, Ativada)" default="off" />
+			<check key="fuel:octane_91" text="Octane 91 (Premium)" default="off" />
+			<check key="fuel:octane_95" text="Octane 95 (Podium)" default="off" />
+			<check key="fuel:ethanol" text="Ethanol" default="off" />
+			<check key="fuel:cng" text="GNV (Compressed Natural Gas)" default="off" />
+			<label text="Check for AKI, (R+M/2), RON, MON or Octane number for gasoline variants."/>
+			<space/>
+			<label text="Type of service"/>
+			<check key="self_service" text="Self Service" default="off" />
+			<label text="Payment types"/>
+			<check key="payment:cash" text="Cash" default="on" />
+			<check key="payment:check" text="Check" default="off" />
+			<check key="payment:debit_cards" text="Debit Cards" default="off" />
+			<check key="payment:maestro" text="Maestro" default="off" />
+			<check key="payment:visa_electron" text="Visa Electron" default="off" />
+			<check key="payment:bankaxess" text="BankAxess" default="off" />
+			<check key="payment:credit_cards" text="Credit Cards" default="off" />
+			<check key="payment:mastercard" text="MasterCard" default="off" />
+			<check key="payment:visa" text="Visa" default="off" />
+			<check key="payment:american_express" text="American Express" default="off" />
+			<check key="payment:diners_club" text="Diners Club" default="off" />
+		</item>
+		<item name="Love Hotel" pt_BR.name="Motel" icon="/Users/skippern/Documents/OpenStreetMap/BR/accommodation/love_hotel.svg" type="node,closedway">
+			<link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=love_hotel"
+			  pt_BR.href="http://wiki.openstreetmap.org/wiki/Pt-br:Tag:amenity=love_hotel" />
+			<label text="Edit Love Hotel" />
+			<space />
+			<key key="amenity" value="love_hotel" />
+			<text key="name" text="Name" />
+			<combo key="opening_hours" text="Opening Hours">
+				<list_entry value="24/7"/>
+				<list_entry value="Mo-Fr 08:30-20:00"/>
+				<list_entry value="Tu-Su 08:00-15:00;Sa 08:00-12:00"/>
+			</combo>
+		</item>
+		<item name="Addresses" icon="presets/addresses.png" type="node,way,closedway,relation">
+			<label text="Edit Annotation/Address"/>
+			<space/>
+			<key key="addr:country" value="BR"/>
+			<text key="addr:housenumber" text="House number" auto_increment="-2,-1,+1,+2"/>
+			<optional>
+				<text key="addr:housename" text="House name"/>
+				<text key="addr:place" text="Place or locality name"/>
+			</optional>
+			<text key="addr:street" text="Street name"/>
+			<text key="addr:suburb" text="Suburb name"/>
+			<text key="addr:city" text="City name"/>
+			<combo key="addr:state" text="State name" use_last_as_default="true">
+				<list_entry value="Acre"/>
+				<list_entry value="Alagoas"/>
+				<list_entry value="Amapá"/>
+				<list_entry value="Amazonas"/>
+				<list_entry value="Bahia"/>
+				<list_entry value="Ceará"/>
+				<list_entry value="Distrito Federal"/>
+				<list_entry value="Espírito Santo"/>
+				<list_entry value="Goiás"/>
+				<list_entry value="Maranhão"/>
+				<list_entry value="Mato Grosso"/>
+				<list_entry value="Mato Grosso do Sul"/>
+				<list_entry value="Minas Gerais"/>
+				<list_entry value="Paraná"/>
+				<list_entry value="Paraíba"/>
+				<list_entry value="Pará"/>
+				<list_entry value="Pernambuco"/>
+				<list_entry value="Piauí"/>
+				<list_entry value="Rio de Janeiro"/>
+				<list_entry value="Rio Grande do Norte"/>
+				<list_entry value="Rio Grande do Sul"/>
+				<list_entry value="Rondônia"/>
+				<list_entry value="Roraima"/>
+				<list_entry value="Santa Catarina"/>
+				<list_entry value="Sergipe"/>
+				<list_entry value="São Paulo"/>
+				<list_entry value="Tocatins"/>
+			</combo>
+			<text key="addr:postcode" text="Post Code"/>
+		</item>
+	</group>
+</annotations>
