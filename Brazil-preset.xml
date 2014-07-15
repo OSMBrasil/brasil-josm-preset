@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<annotations author="Aun 'Skippern' Johnsen" version="0.1" descroption="Brazilian Tagging Preset" shortdescription="Brazil">
+<annotations author="Aun 'Skippern' Johnsen" version="0.1" description="Brazilian Tagging Preset" shortdescription="Brazil">
 <chunk id="rodovia">
 			<combo key="network" text="Network" use_last_as_default="true" required="true" >
 				<list_entry value="BR" short_description="Federal Highway"/>
