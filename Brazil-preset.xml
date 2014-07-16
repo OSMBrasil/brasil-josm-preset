@@ -43,9 +43,10 @@
 				<list_entry value="sand"/>
 			</combo>
 </chunk>
-	<group name="Brazil" icon="http://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/22px-Flag_of_Brazil.svg.png">
-		<item name="Highway Network" icon="presets/trunk.png" type="way,relation">
-			<label text="Edit Highway Network" />
+	<group name="Brazil" pt.name="Brasil" pt_BR.name="Brasil" icon="http://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/22px-Flag_of_Brazil.svg.png">
+		<item name="Highway Network" icon="presets/motorway.png" type="way,relation">
+			<label text="Edit Highway Network"
+				pt.text="Editar rede de Rodovia"/>
 			<space />
 			<combo key="highway" text="Highway" use_last_as_default="true" required="true">
                 <list_entry value="motorway"/>
@@ -64,75 +65,93 @@
 			<text key="ref" text="Reference" default="" delete_if_empty="true" />
 			<reference ref="rodovia"/>
 			<text key="maxspeed" text="Maxspeed" default="" delete_if_empty="true" />
+			<optional>
+				<reference ref="surface"/>
+			</optional>
 		</item>
-		<item name="Duplicada" icon="presets/empty.png" type="way">
-			<label text="DNIT class duplicated highway" />
-			<label pt.text="DNIT classe rodovia duplicada" />
+		<item name="Duplicada" icon="presets/trunk.png" type="way">
+			<label text="DNIT class duplicated highway"
+				pt.text="DNIT classe rodovia duplicada" />
 			<key key="highway" value="trunk"/>
+			<key key="oneway" value="true"/>
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
 			<text key="maxspeed" text="Maxspeed"/>
 		</item>
 		<item name="Em Duplicação" icon="presets/empty.png" type="way">
-			<label text="DNIT class highway in duplication" />
-			<label pt.text="DNIT classe rodovia em duplicação" />
+			<label text="DNIT class highway in duplication"
+				pt.text="DNIT classe rodovia em duplicação" />
 			<key key="highway" value="trunk"/>
+			<key key="oneway" value="false"/>
+			<key key="surface" value="paved" match="none"/>
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
 			<text key="maxspeed" text="Maxspeed"/>
 		</item>
-		<item name="Pivementada" icon="presets/empty.png" type="way">
-			<label text="DNIT class paved highway" />
-			<label pt.text="DNIT classe rodovia pivementada" />
+		<item name="Pivementada" icon="presets/way_primary.png" type="way">
+			<label text="DNIT class paved highway"
+				pt.text="DNIT classe rodovia pivementada" />
 			<key key="highway" value="primary"/>
+			<key key="surface" value="paved" match="none"/>
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
 			<text key="maxspeed" text="Maxspeed"/>
 		</item>
-		<item name="Em Pivementação" icon="presets/empty.png" type="way">
-			<label text="DNIT class highway in paving" />
-			<label pt.text="DNIT classe rodovia em pivementação" />
-			<key key="highway" value="secundary"/>
+		<item name="Em Pivementação" icon="presets/way_secondary.png" type="way">
+			<label text="DNIT class highway in paving"
+				pt.text="DNIT classe rodovia em pivementação" />
+			<key key="highway" value="secondary"/>
+			<key key="surface" value="paved" match="none"/>
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
 			<text key="maxspeed" text="Maxspeed"/>
 		</item>
-		<item name="Implantada" icon="presets/empty.png" type="way">
-			<label text="DNIT class implemented highway" />
-			<label pt.text="DNIT classe rodovia implantada" />
+		<item name="Implantada" icon="presets/way_tertiary.png" type="way">
+			<label text="DNIT class implemented highway"
+				pt.text="DNIT classe rodovia implantada" />
 			<key key="highway" value="tertiary"/>
+			<key key="surface" value="unpaved" match="none"/>
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
 			<text key="maxspeed" text="Maxspeed"/>
 		</item>
 		<item name="Em Implantação" icon="presets/empty.png" type="way">
-			<label text="DNIT class highway under implementation" />
-			<label pt.text="DNIT classe rodovia em implantação" />
+			<label text="DNIT class highway under implementation"
+				pt.text="DNIT classe rodovia em implantação" />
 			<key key="highway" value="tertiary"/>
+			<key key="surface" value="unpaved" match="none"/>
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
 			<text key="maxspeed" text="Maxspeed"/>
 		</item>
-		<item name="Leitao Natural" icon="presets/empty.png" type="way">
-			<label text="DNIT class highway of natural track" />
-			<label pt.text="DNIT classe rodovia leitao natural" />
+		<item name="Leitao Natural" icon="presets/way_unclassified.png" type="way">
+			<label text="DNIT class highway of natural track"
+				pt.text="DNIT classe rodovia leitao natural" />
 			<key key="highway" value="unclassified"/>
+			<key key="surface" value="unpaved" match="none"/>
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
 			<text key="maxspeed" text="Maxspeed"/>
 		</item>
 		<item name="Planejada" icon="presets/empty.png" type="way">
+			<kabek text="DNIT planned highways"
+				pt.text="DNIT rodovias planejada"/>
+			<key key="highway" value="planned"/>
+			<text key="name" text="Name"/>
+			<text key="ref" text="Reference"/>
+			<reference ref="rodovia"/>
 		</item>
 		<item name="Fuel" icon="presets/fuel.png" type="node,closedway">
 			<link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=fuel"
-			  pt_BR.href="http://wiki.openstreetmap.org/wiki/Pt-br:Tag:amenity=fuel" />
+				pt.href="http://wiki.openstreetmap.org/wiki/Pt:Tag:amenity=fuel"
+				pt_BR.href="http://wiki.openstreetmap.org/wiki/Pt-br:Tag:amenity=fuel" />
 			<label text="Edit Fuel" />
 			<key key="amenity" value="fuel" />
 			<combo key="brand" text="Brand">
@@ -177,9 +196,10 @@
 			<check key="payment:american_express" text="American Express" default="off" />
 			<check key="payment:diners_club" text="Diners Club" default="off" />
 		</item>
-		<item name="Love Hotel" pt_BR.name="Motel" icon="/Users/skippern/Documents/OpenStreetMap/BR/accommodation/love_hotel.svg" type="node,closedway">
+		<item name="Love Hotel" pt.name="Motel" pt_BR.name="Motel" icon="https://github.com/Skippern/brasil-josm-preset/raw/master/icons/love_hotel.svg" type="node,closedway">
 			<link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=love_hotel"
-			  pt_BR.href="http://wiki.openstreetmap.org/wiki/Pt-br:Tag:amenity=love_hotel" />
+				pt.href="http://wiki.openstreetmap.org/wiki/Pt:Tag:amenity=love_hotel"
+				pt_BR.href="http://wiki.openstreetmap.org/wiki/Pt-br:Tag:amenity=love_hotel" />
 			<label text="Edit Love Hotel" />
 			<space />
 			<key key="amenity" value="love_hotel" />
@@ -191,47 +211,47 @@
 			</combo>
 		</item>
 		<item name="Addresses" icon="presets/addresses.png" type="node,way,closedway,relation">
-			<label text="Edit Annotation/Address"/>
+			<label text="Edit Annotation/Address"
+				pt.text="Editar Endreço"
+				pt_BR.text="Editar Endreço"/>
 			<space/>
 			<key key="addr:country" value="BR"/>
 			<text key="addr:housenumber" text="House number" auto_increment="-2,-1,+1,+2"/>
-			<optional>
-				<text key="addr:housename" text="House name"/>
-				<text key="addr:place" text="Place or locality name"/>
-			</optional>
+			<text key="addr:housename" text="House name"/>
+			<text key="addr:place" text="Place or locality name"/>
 			<text key="addr:street" text="Street name"/>
 			<text key="addr:suburb" text="Suburb name"/>
 			<text key="addr:city" text="City name"/>
-			<combo key="addr:state" text="State name" use_last_as_default="true">
-				<list_entry value="Acre"/>
-				<list_entry value="Alagoas"/>
-				<list_entry value="Amapá"/>
-				<list_entry value="Amazonas"/>
-				<list_entry value="Bahia"/>
-				<list_entry value="Ceará"/>
-				<list_entry value="Distrito Federal"/>
-				<list_entry value="Espírito Santo"/>
-				<list_entry value="Goiás"/>
-				<list_entry value="Maranhão"/>
-				<list_entry value="Mato Grosso"/>
-				<list_entry value="Mato Grosso do Sul"/>
-				<list_entry value="Minas Gerais"/>
-				<list_entry value="Paraná"/>
-				<list_entry value="Paraíba"/>
-				<list_entry value="Pará"/>
-				<list_entry value="Pernambuco"/>
-				<list_entry value="Piauí"/>
-				<list_entry value="Rio de Janeiro"/>
-				<list_entry value="Rio Grande do Norte"/>
-				<list_entry value="Rio Grande do Sul"/>
-				<list_entry value="Rondônia"/>
-				<list_entry value="Roraima"/>
-				<list_entry value="Santa Catarina"/>
-				<list_entry value="Sergipe"/>
-				<list_entry value="São Paulo"/>
-				<list_entry value="Tocatins"/>
+			<combo key="addr:state" text="State name" use_last_as_default="true" required="true">
+				<list_entry value="AC" display_value="Acre"/>
+				<list_entry value="AL" display_value="Alagoas"/>
+				<list_entry value="AP" display_value="Amapá"/>
+				<list_entry value="AM" display_value="Amazonas"/>
+				<list_entry value="BA" display_value="Bahia"/>
+				<list_entry value="CE" display_value="Ceará"/>
+				<list_entry value="DF" display_value="Distrito Federal"/>
+				<list_entry value="ES" display_value="Espírito Santo"/>
+				<list_entry value="GO" display_value="Goiás"/>
+				<list_entry value="MA" display_value="Maranhão"/>
+				<list_entry value="MT" display_value="Mato Grosso"/>
+				<list_entry value="MS" display_value="Mato Grosso do Sul"/>
+				<list_entry value="MG" display_value="Minas Gerais"/>
+				<list_entry value="PR" display_value="Paraná"/>
+				<list_entry value="PB" display_value="Paraíba"/>
+				<list_entry value="PA" display_value="Pará"/>
+				<list_entry value="PE" display_value="Pernambuco"/>
+				<list_entry value="PI" display_value="Piauí"/>
+				<list_entry value="PR" display_value="Rio de Janeiro"/>
+				<list_entry value="RN" display_value="Rio Grande do Norte"/>
+				<list_entry value="RS" display_value="Rio Grande do Sul"/>
+				<list_entry value="RO" display_value="Rondônia"/>
+				<list_entry value="RR" display_value="Roraima"/>
+				<list_entry value="SC" display_value="Santa Catarina"/>
+				<list_entry value="SE" display_value="Sergipe"/>
+				<list_entry value="SP" display_value="São Paulo"/>
+				<list_entry value="TO" display_value="Tocatins"/>
 			</combo>
-			<text key="addr:postcode" text="Post Code"/>
+			<text key="addr:postcode" text="Post Code (CEP)" pt.text="CEP" pt_BR.text="CEP"/>
 		</item>
 	</group>
 </annotations>
