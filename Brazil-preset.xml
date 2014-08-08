@@ -32,6 +32,44 @@
 				<list_entry value="BR:TO" short_description="Tocatins State Highway"/>
 			</combo>
 </chunk>
+<chunk id="road_attributes">
+	<combo key="lanes" text="Lanes">
+		<list_entry value="1"/>
+		<list_entry value="2"/>
+		<list_entry value="3"/>
+		<list_entry value="4"/>
+		<list_entry value="5"/>
+		<list_entry value="6"/>
+	</combo>
+	<space/>
+	<text key="maxspeed" text="Max. speed (km/h)"/>
+	<text key="maxheight" text="Max. height"/>
+	<text key="maxweight" text="Max. weight"/>
+	<space/>
+	<check key="bridge" text="Bridge"/>
+	<check key="tunnel" text="Tunnel"/>
+	<check key="oneway" text="Oneway"/>
+	<check key="lit" text="Lit"/>
+	<check key="cutting" text="Cutting"/>
+	<check key="embankment" text="Embankment"/>
+	<check key="passing_places" text="Passing Places"/>
+	<space/>
+	<combo key="incline" text="Incline">
+		<list_entry value="10%"/>
+		<list_entry value="-10%"/>
+		<list_entry value="10º"/>
+		<list_entry value="-10º"/>
+		<list_entry value="up"/>
+		<list_entry value="down"/>
+	</combo>
+	<text key="width" text="Width"/>
+	<combo key="overtaking" text="Overtaking">
+		<list_entry value="yes"/>
+		<list_entry value="no"/>
+		<list_entry value="forward"/>
+		<list_entry value="backward"/>
+	</combo>
+</chunk>
 <chunk id="surface">
 			<combo key="surface" text="Surface" use_last_as_default="true">
 				<list_entry value="paved"/>
@@ -64,7 +102,7 @@
 			<text key="name" text="Name" default="" delete_if_empty="true" />
 			<text key="ref" text="Reference" default="" delete_if_empty="true" />
 			<reference ref="rodovia"/>
-			<text key="maxspeed" text="Maxspeed" default="" delete_if_empty="true" />
+			<reference ref="road_attributes"/>
 			<optional>
 				<reference ref="surface"/>
 			</optional>
@@ -77,7 +115,7 @@
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
-			<text key="maxspeed" text="Maxspeed"/>
+			<reference ref="road_attributes"/>
 		</item>
 		<item name="Em Duplicação" icon="presets/empty.png" type="way">
 			<label text="DNIT class highway in duplication"
@@ -88,7 +126,7 @@
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
-			<text key="maxspeed" text="Maxspeed"/>
+			<reference ref="road_attributes"/>
 		</item>
 		<item name="Pivementada" icon="presets/way_primary.png" type="way">
 			<label text="DNIT class paved highway"
@@ -98,7 +136,7 @@
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
-			<text key="maxspeed" text="Maxspeed"/>
+			<reference ref="road_attributes"/>
 		</item>
 		<item name="Em Pivementação" icon="presets/way_secondary.png" type="way">
 			<label text="DNIT class highway in paving"
@@ -108,7 +146,7 @@
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
-			<text key="maxspeed" text="Maxspeed"/>
+			<reference ref="road_attributes"/>
 		</item>
 		<item name="Implantada" icon="presets/way_tertiary.png" type="way">
 			<label text="DNIT class implemented highway"
@@ -118,7 +156,7 @@
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
-			<text key="maxspeed" text="Maxspeed"/>
+			<reference ref="road_attributes"/>
 		</item>
 		<item name="Em Implantação" icon="presets/empty.png" type="way">
 			<label text="DNIT class highway under implementation"
@@ -128,7 +166,7 @@
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
-			<text key="maxspeed" text="Maxspeed"/>
+			<reference ref="road_attributes"/>
 		</item>
 		<item name="Leitao Natural" icon="presets/way_unclassified.png" type="way">
 			<label text="DNIT class highway of natural track"
@@ -138,7 +176,7 @@
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
-			<text key="maxspeed" text="Maxspeed"/>
+			<reference ref="road_attributes"/>
 		</item>
 		<item name="Planejada" icon="presets/empty.png" type="way">
 			<kabek text="DNIT planned highways"
