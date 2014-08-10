@@ -112,6 +112,7 @@
 				pt.text="DNIT classe rodovia duplicada" />
 			<key key="highway" value="trunk"/>
 			<key key="oneway" value="true"/>
+			<key key="surface" value="paved" match="none"/>
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
@@ -141,7 +142,7 @@
 		<item name="Em Pivementação" icon="presets/way_secondary.png" type="way">
 			<label text="DNIT class highway in paving"
 				pt.text="DNIT classe rodovia em pivementação" />
-			<key key="highway" value="secondary"/>
+			<key key="highway" value="secondary" />
 			<key key="surface" value="paved" match="none"/>
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
@@ -161,7 +162,7 @@
 		<item name="Em Implantação" icon="presets/empty.png" type="way">
 			<label text="DNIT class highway under implementation"
 				pt.text="DNIT classe rodovia em implantação" />
-			<key key="highway" value="tertiary"/>
+			<key key="highway" value="tertiary" match="none"/>
 			<key key="surface" value="unpaved" match="none"/>
 			<text key="name" text="Name"/>
 			<text key="ref"	text="Reference"/>
