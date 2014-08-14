@@ -82,7 +82,7 @@
 			</combo>
 </chunk>
 	<group name="Brazil" pt.name="Brasil" pt_BR.name="Brasil" icon="http://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/22px-Flag_of_Brazil.svg.png">
-		<item name="Highway Network" icon="presets/motorway.png" type="way,relation">
+		<item name="Highway Network" icon="presets/motorway.png" type="way,closedway,relation">
 			<label text="Edit Highway Network"
 				pt.text="Editar rede de Rodovia"/>
 			<space />
@@ -107,7 +107,7 @@
 				<reference ref="surface"/>
 			</optional>
 		</item>
-		<item name="Duplicada" icon="presets/trunk.png" type="way">
+		<item name="Duplicada" icon="presets/trunk.png" type="way,closedway,relation">
 			<label text="DNIT class duplicated highway"
 				pt.text="DNIT classe rodovia duplicada" />
 			<key key="highway" value="trunk"/>
@@ -118,7 +118,7 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Em Duplicação" icon="presets/trunk.png" type="way">
+		<item name="Em Duplicação" icon="presets/trunk.png" type="way,closedway,relation">
 			<label text="DNIT class highway in duplication"
 				pt.text="DNIT classe rodovia em duplicação" />
 			<key key="highway" value="trunk"/>
@@ -129,7 +129,7 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Pivementada" icon="presets/way_primary.png" type="way">
+		<item name="Pivementada" icon="presets/way_primary.png" type="way,closedway,relation">
 			<label text="DNIT class paved highway"
 				pt.text="DNIT classe rodovia pivementada" />
 			<key key="highway" value="primary"/>
@@ -139,7 +139,7 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Em Pivementação" icon="presets/way_secondary.png" type="way">
+		<item name="Em Pivementação" icon="presets/way_secondary.png" type="way,closedway,relation">
 			<label text="DNIT class highway in paving"
 				pt.text="DNIT classe rodovia em pivementação" />
 			<key key="highway" value="secondary" />
@@ -149,7 +149,7 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Implantada" icon="presets/way_tertiary.png" type="way">
+		<item name="Implantada" icon="presets/way_tertiary.png" type="way,closedway,relation">
 			<label text="DNIT class implemented highway"
 				pt.text="DNIT classe rodovia implantada" />
 			<key key="highway" value="tertiary"/>
@@ -159,7 +159,7 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Em Implantação" icon="presets/way_tertiary.png" type="way">
+		<item name="Em Implantação" icon="presets/way_tertiary.png" type="way,closedway,relation">
 			<label text="DNIT class highway under implementation"
 				pt.text="DNIT classe rodovia em implantação" />
 			<key key="highway" value="tertiary" match="none"/>
@@ -169,7 +169,7 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Leitao Natural" icon="presets/way_unclassified.png" type="way">
+		<item name="Leitao Natural" icon="presets/way_unclassified.png" type="way,closedway,relation">
 			<label text="DNIT class highway of natural track"
 				pt.text="DNIT classe rodovia leitao natural" />
 			<key key="highway" value="unclassified"/>
@@ -179,13 +179,46 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Planejada" icon="presets/construction.png" type="way">
-			<kabek text="DNIT planned highways"
+		<item name="Planejada" icon="presets/construction.png" type="way,closedway,relation">
+			<label text="DNIT planned highways"
 				pt.text="DNIT rodovias planejada"/>
 			<key key="highway" value="planned"/>
 			<text key="name" text="Name"/>
 			<text key="ref" text="Reference"/>
 			<reference ref="rodovia"/>
+		</item>
+		<item name="Junction" icon="presets/empty.png" type="way,closedway">
+			<label text="Junctions"/>
+			<link href="http://wiki.openstreetmap.org/wiki/Key:junction"
+				pt_BR.href="http://wiki.openstreetmap.org/wiki/Pt-br:Key:junction" />
+			<combo key="highway" text="Highway" required="true" match="none">
+                <list_entry value="motorway"/>
+                <list_entry value="motorway_link"/>
+                <list_entry value="trunk"/>
+                <list_entry value="trunk_link"/>
+                <list_entry value="primary"/>
+                <list_entry value="primary_link"/>
+                <list_entry value="secundary"/>
+                <list_entry value="secundary_link"/>
+                <list_entry value="tertiary"/>
+                <list_entry value="tertiary_link"/>
+                <list_entry value="unclassified"/>
+				<list_entry value="residential"/>
+				<list_entry value="service"/>
+			</combo>
+			<combo key="junction" text="Junction" required="true" match="key">
+				<list_entry value="yes"/>
+				<list_entry value="roundabout"/>
+				<list_entry value="jughandle"/>
+				<list_entry value="ramp"/>
+				<list_entry value="cloverleaf"/>
+				<list_entry value="approach"/>
+				<list_entry value="diamond"/>
+				<list_entry value="trumpet"/>
+			</combo>
+			<text key="name" text="Name"/>
+			<text key="ref" text="Reference"/>
+			<check key="supervised" text="Supervised" default="off"/>
 		</item>
 		<item name="Fuel" icon="presets/fuel.png" type="node,closedway">
 			<link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=fuel"
