@@ -187,7 +187,7 @@
 			<text key="ref" text="Reference"/>
 			<reference ref="rodovia"/>
 		</item>
-		<item name="Junction" icon="presets/empty.png" type="way,closedway">
+		<item name="Junction" icon="presets/roundabout.png" type="way,closedway">
 			<label text="Junctions"/>
 			<link href="http://wiki.openstreetmap.org/wiki/Key:junction"
 				pt_BR.href="http://wiki.openstreetmap.org/wiki/Pt-br:Key:junction" />
