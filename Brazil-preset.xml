@@ -118,7 +118,7 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Em Duplicação" icon="presets/trunk.png" type="way,closedway,relation">
+		<item name="Em Obras Duplicação" icon="presets/trunk.png" type="way,closedway,relation">
 			<label text="DNIT class highway in duplication"
 				pt.text="DNIT classe rodovia em duplicação" />
 			<key key="highway" value="trunk"/>
@@ -139,7 +139,7 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Em Pivementação" icon="presets/way_secondary.png" type="way,closedway,relation">
+		<item name="Em Obras Pivementação" icon="presets/way_secondary.png" type="way,closedway,relation">
 			<label text="DNIT class highway in paving"
 				pt.text="DNIT classe rodovia em pivementação" />
 			<key key="highway" value="secondary" />
@@ -159,7 +159,7 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Em Implantação" icon="presets/way_tertiary.png" type="way,closedway,relation">
+		<item name="Em Obras Implantação" icon="presets/way_tertiary.png" type="way,closedway,relation">
 			<label text="DNIT class highway under implementation"
 				pt.text="DNIT classe rodovia em implantação" />
 			<key key="highway" value="tertiary" match="none"/>
@@ -182,7 +182,7 @@
 		<item name="Planejada" icon="presets/construction.png" type="way,closedway,relation">
 			<label text="DNIT planned highways"
 				pt.text="DNIT rodovias planejada"/>
-			<key key="highway" value="planned"/>
+			<key key="highway" value="proposed"/>
 			<text key="name" text="Name"/>
 			<text key="ref" text="Reference"/>
 			<reference ref="rodovia"/>
