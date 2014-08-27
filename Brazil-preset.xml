@@ -159,7 +159,7 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Em Obras Implantação" icon="presets/way_tertiary.png" type="way,closedway,relation">
+<!--		<item name="Em Obras Implantação" icon="presets/way_tertiary.png" type="way,closedway,relation">
 			<label text="DNIT class highway under implementation"
 				pt.text="DNIT classe rodovia em implantação" />
 			<key key="highway" value="tertiary" match="none"/>
@@ -168,7 +168,7 @@
 			<text key="ref"	text="Reference"/>
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
-		</item>
+		</item>     -->
 		<item name="Leitao Natural" icon="presets/way_unclassified.png" type="way,closedway,relation">
 			<label text="DNIT class highway of natural track"
 				pt.text="DNIT classe rodovia leitao natural" />
