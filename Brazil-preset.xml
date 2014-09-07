@@ -53,6 +53,7 @@
 	<check key="cutting" text="Cutting"/>
 	<check key="embankment" text="Embankment"/>
 	<check key="passing_places" text="Passing Places"/>
+    <check key="lit" text="Streetlights"/>
 	<space/>
 	<combo key="incline" text="Incline">
 		<list_entry value="10%"/>
@@ -118,17 +119,6 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Em Obras Duplicação" icon="presets/trunk.png" type="way,closedway,relation">
-			<label text="DNIT class highway in duplication"
-				pt.text="DNIT classe rodovia em duplicação" />
-			<key key="highway" value="trunk"/>
-			<key key="oneway" value="false"/>
-			<key key="surface" value="paved" match="none"/>
-			<text key="name" text="Name"/>
-			<text key="ref"	text="Reference"/>
-			<reference ref="rodovia"/>
-			<reference ref="road_attributes"/>
-		</item>
 		<item name="Pivementada" icon="presets/way_primary.png" type="way,closedway,relation">
 			<label text="DNIT class paved highway"
 				pt.text="DNIT classe rodovia pivementada" />
@@ -139,9 +129,9 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-		<item name="Em Obras Pivementação" icon="presets/way_secondary.png" type="way,closedway,relation">
-			<label text="DNIT class highway in paving"
-				pt.text="DNIT classe rodovia em pivementação" />
+		<item name="Pivementada (inferior)" icon="presets/way_secondary.png" type="way,closedway,relation">
+			<label text="DNIT class paved highway (without shoulder)"
+				pt.text="DNIT classe rodovia pivementada (sem acostamento)" />
 			<key key="highway" value="secondary" />
 			<key key="surface" value="paved" match="none"/>
 			<text key="name" text="Name"/>
@@ -159,16 +149,6 @@
 			<reference ref="rodovia"/>
 			<reference ref="road_attributes"/>
 		</item>
-<!--		<item name="Em Obras Implantação" icon="presets/way_tertiary.png" type="way,closedway,relation">
-			<label text="DNIT class highway under implementation"
-				pt.text="DNIT classe rodovia em implantação" />
-			<key key="highway" value="tertiary" match="none"/>
-			<key key="surface" value="unpaved" match="none"/>
-			<text key="name" text="Name"/>
-			<text key="ref"	text="Reference"/>
-			<reference ref="rodovia"/>
-			<reference ref="road_attributes"/>
-		</item>     -->
 		<item name="Leitao Natural" icon="presets/way_unclassified.png" type="way,closedway,relation">
 			<label text="DNIT class highway of natural track"
 				pt.text="DNIT classe rodovia leitao natural" />
