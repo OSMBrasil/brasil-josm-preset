@@ -78,7 +78,7 @@
 				<list_entry value="asfalt"/>
 				<list_entry value="cobblestone"/>
 				<list_entry value="concrete"/>
-				<list_entry vlaue="earth"/>
+				<list_entry value="earth"/>
 				<list_entry value="sand"/>
 			</combo>
 </chunk>
