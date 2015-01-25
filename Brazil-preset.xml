@@ -255,6 +255,7 @@
 			<label text="Edit Love Hotel" />
 			<space />
 			<key key="amenity" value="love_hotel" />
+            <key key="tourism" value="motel" />
 			<text key="name" text="Name" />
 			<combo key="opening_hours" text="Opening Hours">
 				<list_entry value="24/7"/>
@@ -274,7 +275,7 @@
 			<text key="addr:street" text="Street name"/>
 			<text key="addr:suburb" text="Suburb name"/>
 			<text key="addr:city" text="City name"/>
-			<combo key="addr:state" text="State name" use_last_as_default="true" required="true">
+			<combo key="addr:state" text="State name" pt.text="Nome do Estado" pt_BR.text="Nome do Estado" use_last_as_default="true" required="true">
 				<list_entry value="AC" display_value="Acre"/>
 				<list_entry value="AL" display_value="Alagoas"/>
 				<list_entry value="AP" display_value="Amapá"/>
